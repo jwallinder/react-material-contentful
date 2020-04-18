@@ -34,4 +34,4 @@ yarn-error.log*
 .vscode
 **/*.http
 
-ctf-config.json
+contentful/ctf-config.json
