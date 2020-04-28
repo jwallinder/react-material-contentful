@@ -20,10 +20,14 @@ import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage.js
 import withContentfulClient from 'components/Contentful/withContentfulClient.jsx';
 import CtfArticle from '../Components/CtfArticle.jsx';
 
+// Sections for this page
+import Form from './Form.jsx';
+
 const dashboardRoutes = [];
 
-class LandingPage extends React.Component {
+class FormPage extends React.Component {
   constructor(props) {
+    console.log('FormPage constructor');
     super(props);
 
     this.state = {
@@ -36,7 +40,8 @@ class LandingPage extends React.Component {
   componentDidMount() {
     this.setState({ isLoading: true });
     const { getEntry } = this.props;
-    const documentId = process.env.REACT_APP_ROOT_PAGE;
+    const documentId = process.env.REACT_APP_FORM_PAGE;
+    console.log('documentId: ', documentId);
 
     getEntry(documentId)
       .then((result) => {
@@ -101,6 +106,7 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             {msg()}
             {renderArticles()}
+            <Form />
           </div>
         </div>
         {/*
@@ -110,4 +116,4 @@ class LandingPage extends React.Component {
     );
   }
 }
-export default withContentfulClient(withStyles(landingPageStyle)(LandingPage));
+export default withContentfulClient(withStyles(landingPageStyle)(FormPage));
