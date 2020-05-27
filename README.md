@@ -28,3 +28,7 @@ This requires Contentful CLI. Please see https://www.contentful.com/developers/d
 Submit formdata to Firebase and send form-submit-confirmation as mail using Sendgrid and [sendgrid-gateway](https://github.com/jwallinder/sendgrid-gateway)
 
 An example can be found on url `/form`, backed by `/src/views/Components/FormPage/FormPage.jsx`
+
+# Live Demo
+
+The site is deployed and running in Netlify. Please browse to https://react-material-contentful.netlify.app/ to test it.
