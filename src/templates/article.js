@@ -1,5 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+// @material-ui/core components
+import withStyles from '@material-ui/core/styles/withStyles';
+
 //import { Helmet } from 'react-helmet';
 import get from 'lodash/get';
 //import Img from 'gatsby-image';
@@ -11,6 +14,9 @@ import { BLOCKS } from '@contentful/rich-text-types';
 // core components
 import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
+
+import productStyle from '../assets/jss/material-kit-react/views/landingPageSections/productStyle.jsx';
+import withContentfulClient from '../components/Contentful/withContentfulClient.jsx';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -53,7 +59,7 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate;
+export default withContentfulClient(withStyles(productStyle)(BlogPostTemplate));
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

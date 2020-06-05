@@ -92,7 +92,7 @@ class Article extends React.Component {
         </GridContainer>
       );
     };
-    return <div className={classes.section}>{document ? renderArticle(document, classes) : renderSkeleton()}</div>;
+    return <div className={classes.section}>{document ? renderArticle(docu(ment, classes) : renderSkeleton()}</div>;
   }
 }
 export default withContentfulClient(withStyles(productStyle)(Article));

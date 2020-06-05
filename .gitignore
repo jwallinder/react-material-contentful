@@ -16,6 +16,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env.development
+.env.production
 
 package-lock.json
 
@@ -33,5 +35,8 @@ yarn-error.log*
 *.iml
 .vscode
 **/*.http
+
+# gatsby files
+.cache/
 
 contentful/ctf-config.json
