@@ -16,10 +16,6 @@ import SnackbarContent from 'components/Snackbar/SnackbarContent.jsx';
 
 import landingPageStyle from 'assets/jss/material-kit-react/views/landingPage.jsx';
 
-//Contentful
-import withContentfulClient from 'components/Contentful/withContentfulClient.jsx';
-import CtfArticle from '../Components/CtfArticle.jsx';
-
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
@@ -110,4 +106,4 @@ class LandingPage extends React.Component {
     );
   }
 }
-export default withContentfulClient(withStyles(landingPageStyle)(LandingPage));
+export default landingPageStyle(LandingPage);
